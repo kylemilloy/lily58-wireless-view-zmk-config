@@ -19,18 +19,18 @@
   combos {
     compatible = "zmk,combos";
 
-    combo_to_qwerty {
+    combo_colemak_to_qwerty {
       layers = <CLMK>;
       timeout-ms = <50>;
       bindings = <&to QWER>;
-      key-positions = <54 58>;
+      key-positions = <42 43>;
     };
 
-    combo_to_colemak {
+    combo_qwerty_to_colemak {
       layers = <QWER>;
       timeout-ms = <50>;
       bindings = <&to CLMK>;
-      key-positions = <54 58>;
+      key-positions = <42 43>;
     };
   };
 
@@ -46,7 +46,7 @@
   typing {
     compatible = "zmk,keymap";
 
-    default_layer {
+    colemak_layer {
       display-name = "Colemak";
       bindings = <
 &none     &none  &none  &none    &none    &none                      &none  &none    &none     &none   &none     &none
@@ -57,7 +57,7 @@
       >;
     };
 
-    alt_layer {
+    qwerty_layer {
       display-name = "Qwerty";
       bindings = <
 &none     &none  &none  &none    &none    &none                      &none  &none    &none     &none   &none     &none
